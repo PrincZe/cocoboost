@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+p { margin: 0; }
+::selection { background: #3F8C6E; color: #fff; }
+
+/* ---- responsive visibility (design breakpoint: 900px) ---- */
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
+@media (max-width: 899px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+}
+
+body {
+  font-family: var(--font-hanken), sans-serif;
+  background: #FBF8F0;
+  color: #5A5249;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+/* ---- hover effects (ported from the design's style-hover attributes) ---- */
+.navlink { padding: 6px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
+.navlink:hover { border-bottom: 2px solid #3F8C6E; color: #211C16; }
+
+.btn-call:hover { border-color: #3F8C6E !important; color: #3F8C6E !important; }
+.btn-wa:hover { background: #1EB256 !important; }
+.btn-primary:hover { background: #2E6B52 !important; }
+.btn-wa-outline:hover { background: #F0FBF4 !important; }
+.btn-outline:hover { border-color: #3F8C6E !important; color: #3F8C6E !important; }
+.btn-about:hover { background: #3F8C6E !important; color: #fff !important; }
+.btn-white:hover { background: #F3EDE0 !important; }
+
+.product-card { transition: transform .2s, box-shadow .2s; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(33,28,22,0.4); }
+
+.footer-link { transition: color .15s; }
+.footer-link:hover { color: #fff; }
+
+.social-wa:hover { background: #25D366 !important; }
+.social-icon:hover { background: #3F8C6E !important; }
+
+.float-wa:hover { background: #1EB256 !important; }
